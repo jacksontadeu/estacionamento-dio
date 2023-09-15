@@ -1,0 +1,14 @@
+D:\DEV\DIO\csharp\Estacionamento\bin\Debug\net6.0\Estacionamento.exe
+D:\DEV\DIO\csharp\Estacionamento\bin\Debug\net6.0\Estacionamento.deps.json
+D:\DEV\DIO\csharp\Estacionamento\bin\Debug\net6.0\Estacionamento.runtimeconfig.json
+D:\DEV\DIO\csharp\Estacionamento\bin\Debug\net6.0\Estacionamento.dll
+D:\DEV\DIO\csharp\Estacionamento\bin\Debug\net6.0\Estacionamento.pdb
+D:\DEV\DIO\csharp\Estacionamento\obj\Debug\net6.0\Estacionamento.GeneratedMSBuildEditorConfig.editorconfig
+D:\DEV\DIO\csharp\Estacionamento\obj\Debug\net6.0\Estacionamento.AssemblyInfoInputs.cache
+D:\DEV\DIO\csharp\Estacionamento\obj\Debug\net6.0\Estacionamento.AssemblyInfo.cs
+D:\DEV\DIO\csharp\Estacionamento\obj\Debug\net6.0\Estacionamento.csproj.CoreCompileInputs.cache
+D:\DEV\DIO\csharp\Estacionamento\obj\Debug\net6.0\Estacionamento.dll
+D:\DEV\DIO\csharp\Estacionamento\obj\Debug\net6.0\refint\Estacionamento.dll
+D:\DEV\DIO\csharp\Estacionamento\obj\Debug\net6.0\Estacionamento.pdb
+D:\DEV\DIO\csharp\Estacionamento\obj\Debug\net6.0\Estacionamento.genruntimeconfig.cache
+D:\DEV\DIO\csharp\Estacionamento\obj\Debug\net6.0\ref\Estacionamento.dll

@@ -1,0 +1,4 @@
+D:\DEV\DIO\csharp\Estacionamento\obj\Debug\net6.0\DesafioEstacionamento.GeneratedMSBuildEditorConfig.editorconfig
+D:\DEV\DIO\csharp\Estacionamento\obj\Debug\net6.0\DesafioEstacionamento.AssemblyInfoInputs.cache
+D:\DEV\DIO\csharp\Estacionamento\obj\Debug\net6.0\DesafioEstacionamento.AssemblyInfo.cs
+D:\DEV\DIO\csharp\Estacionamento\obj\Debug\net6.0\DesafioEstacionamento.csproj.CoreCompileInputs.cache

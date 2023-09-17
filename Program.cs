@@ -1,4 +1,5 @@
 ﻿using Estacionamento.Models;
+using Estacionamento.Utils;
 using System.Numerics;
 using System.Threading;
 
@@ -8,7 +9,7 @@ namespace Estacionamento
     {
         static void Main(string[] args)
         {
-            
+            Utilidades.ExibirNomeEmpresa();
             Console.Write("Valor de Entrada: ");
             decimal entrada = decimal.Parse(Console.ReadLine());
 
@@ -18,7 +19,7 @@ namespace Estacionamento
             int opcao;
             do
             {
-                Menu();
+                Utilidades.Menu();
                 Console.Write("Digite a opção ou 0 para sair: ");
                 opcao = int.Parse(Console.ReadLine());
 
@@ -29,6 +30,7 @@ namespace Estacionamento
                         break;
                     case 2:
                         es.RemoverVeiculo();
+                        
                         break;
                     case 3:
                         es.ListarVeiculos();
@@ -42,15 +44,7 @@ namespace Estacionamento
                 }
             } while (opcao !=0);
         }
-        public static void Menu()
-        {
-            Console.Clear();
-            Console.WriteLine("Tabajara´s Parking");
-            Console.WriteLine("1 - Entrada de Veículo");
-            Console.WriteLine("2 - Saida de Veículo");
-            Console.WriteLine("3 - Listagem de Veículo");
-            Console.WriteLine("0 - Encerrar Sistema");
-        }
+        
         
     }
 }

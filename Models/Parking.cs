@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Estacionamento.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,22 +23,33 @@ namespace Estacionamento.Models
         public void AdicionarVeiculo()
         {
             Console.Clear();
+            Utilidades.ExibirNomeEmpresa();
             Console.Write("Digite a placa do veículo: ");
             string placa = Console.ReadLine();
             veiculos.Add(new Veiculo(placa));
 
         }
+        int totalHoras = 0;
         public void RemoverVeiculo()
         {
             Console.Clear();
+            Utilidades.ExibirNomeEmpresa();
             Console.Write("Digite a placa do veículo: ");
             string placa = Console.ReadLine();
             if (veiculos.Any(v => v.Placa.Equals(placa)))
             {
                 Console.Write("Total de Horas: ");
-                int totalHoras = int.Parse(Console.ReadLine());
+                totalHoras = int.Parse(Console.ReadLine());
+                Console.Clear();
+                Utilidades.ExibirNomeEmpresa();
+                Console.WriteLine("       Recibo ");
+                Console.WriteLine($"Veículo: {placa}");
+                Console.WriteLine($"Total de Horas: {totalHoras}");
+                Console.WriteLine($"Valor a Pagar: {CalcularValor(totalHoras):C}");
+                Console.WriteLine("================================");
+                Console.ReadKey();
                 Console.WriteLine($"Veículo {placa} removido com sucesso!!!");
-                Console.WriteLine($"Total a pagar: {CalcularValor(totalHoras).ToString("F2")}");
+               
                 int index = veiculos.FindIndex(v=> v.Placa.Equals(placa));
                 veiculos.RemoveAt(index);
                 Console.ReadKey();
@@ -57,18 +69,23 @@ namespace Estacionamento.Models
         public void ListarVeiculos()
         {
             Console.Clear();
+            Utilidades.ExibirNomeEmpresa();
+            Console.WriteLine("Lista de veículos estacionados!!!");
             if (veiculos.Any())
             {
                 foreach (var veiculo in veiculos)
                 {
                     Console.WriteLine(veiculo);
+                    
                 }
+                
             }
             else
             {
                 Console.WriteLine("Não há veículos estacionados!!!");
             }
-            
+            Console.ReadKey();
         }
+        
     }
 }

@@ -30,10 +30,14 @@ namespace Estacionamento.Models
             Console.Write("Placa do veículo.: ");
             string placa = Console.ReadLine().ToUpper(); ;
             veiculos.Add(new Veiculo(modelo,placa));
+<<<<<<< HEAD
             Console.WriteLine("==================================");
             Console.WriteLine("Veículo adicionado com sucesso!!!");
             Console.WriteLine("==================================");
             Console.ReadKey();
+=======
+
+>>>>>>> 54e1d4b5ac85b812e33d50a8a692aaaed92f9cfa
         }
         int totalHoras = 0;
         public void RemoverVeiculo()

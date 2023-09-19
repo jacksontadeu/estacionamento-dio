@@ -9,6 +9,6 @@ Sistema de Estaciomamento:
         - Remover Veículos:
         Realiza a saída do veículo especificado pela placa e emitindo o recibo de pagamento do estacionamento,
         ´Listar Veículos:
-        - Lista todos os veículos eatacionados.
+        - Lista todos os veículos estacionados.
 
 

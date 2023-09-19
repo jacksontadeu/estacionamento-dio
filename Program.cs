@@ -16,33 +16,32 @@ namespace Estacionamento
             Console.Write("Valor da Hora: ");
             decimal hora = decimal.Parse(Console.ReadLine());
             Parking es = new Parking(entrada, hora);
-            int opcao;
+            char opcao;
             do
             {
                 Utilidades.Menu();
                 Console.Write("Digite a opção ou 0 para sair: ");
-                opcao = int.Parse(Console.ReadLine());
+                opcao = char.Parse(Console.ReadLine());
 
                 switch (opcao)
                 {
-                    case 1:
+                    case '1':
                         es.AdicionarVeiculo();
                         break;
-                    case 2:
+                    case '2':
                         es.RemoverVeiculo();
-                        
                         break;
-                    case 3:
+                    case '3':
                         es.ListarVeiculos();
                         break;
-                    case 0:
+                    case '0':
                         Console.WriteLine("Fechando o programa!!!");
                         Thread.Sleep(3000);
                         break;
                     default: Console.WriteLine("Opção inválida, digite novamente!!!");
                         break;
                 }
-            } while (opcao !=0);
+            } while (opcao != '0');
         }
         
         

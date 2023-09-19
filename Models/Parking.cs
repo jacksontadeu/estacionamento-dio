@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,9 +25,11 @@ namespace Estacionamento.Models
         {
             Console.Clear();
             Utilidades.ExibirNomeEmpresa();
-            Console.Write("Digite a placa do veículo: ");
-            string placa = Console.ReadLine();
-            veiculos.Add(new Veiculo(placa));
+            Console.Write("Modelo do veículo: ");
+            string modelo = Console.ReadLine().ToUpper();
+            Console.Write("Placa do veículo.: ");
+            string placa = Console.ReadLine().ToUpper(); ;
+            veiculos.Add(new Veiculo(modelo,placa));
 
         }
         int totalHoras = 0;
@@ -34,23 +37,20 @@ namespace Estacionamento.Models
         {
             Console.Clear();
             Utilidades.ExibirNomeEmpresa();
-            Console.Write("Digite a placa do veículo: ");
-            string placa = Console.ReadLine();
+            Console.Write("Placa do veículo: ");
+            string placa = Console.ReadLine().ToUpper();
             if (veiculos.Any(v => v.Placa.Equals(placa)))
             {
+                int index = veiculos.FindIndex(v => v.Placa.Equals(placa));
                 Console.Write("Total de Horas: ");
                 totalHoras = int.Parse(Console.ReadLine());
                 Console.Clear();
                 Utilidades.ExibirNomeEmpresa();
-                Console.WriteLine("       Recibo ");
-                Console.WriteLine($"Veículo: {placa}");
-                Console.WriteLine($"Total de Horas: {totalHoras}");
-                Console.WriteLine($"Valor a Pagar: {CalcularValor(totalHoras):C}");
-                Console.WriteLine("================================");
+                EmitirRecibo(placa);
                 Console.ReadKey();
-                Console.WriteLine($"Veículo {placa} removido com sucesso!!!");
-               
-                int index = veiculos.FindIndex(v=> v.Placa.Equals(placa));
+                Console.WriteLine($"Saída do Veículo {veiculos[index].Modelo} placa {placa} realizada com sucesso!!!");
+                
+                
                 veiculos.RemoveAt(index);
                 Console.ReadKey();
                
@@ -85,6 +85,21 @@ namespace Estacionamento.Models
                 Console.WriteLine("Não há veículos estacionados!!!");
             }
             Console.ReadKey();
+        }
+        public void EmitirRecibo(string placa)
+        {
+            if(veiculos.Any(v => v.Placa.Equals(placa)))
+            {
+                int index = veiculos.FindIndex(v => v.Placa.Equals(placa));
+                Console.WriteLine("           Recibo ");
+                Console.WriteLine("================================");
+                Console.WriteLine($"Veículo: {veiculos[index].Modelo}");
+                Console.WriteLine($"Placa..: {placa}");
+                Console.WriteLine($"Total de Horas: {totalHoras}");
+                Console.WriteLine($"Valor a Pagar: {CalcularValor(totalHoras):C}");
+                Console.WriteLine("================================");
+            }
+            
         }
         
     }
